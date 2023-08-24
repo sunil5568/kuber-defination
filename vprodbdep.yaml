@@ -19,7 +19,7 @@ spec:
         image: sunil2211/vprofiledb
         volumeMounts:
           - mountPath: /var/lib/mysql
-            name: vpro-db-data
+            name: my-pvc
         resources:
           limits:
             memory: "128Mi"
