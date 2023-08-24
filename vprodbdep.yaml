@@ -36,14 +36,13 @@ spec:
       nodeSelector:
         zone: ap-south-1a
       volumes: 
-        - name: vpro-db-data
-          awsElasticBlockstore:
-            volumeID: vol-0ba94828b1dbe83c6
-            fsType: ext4
+        - name: my-pvc
+          persistentVolumeClaim:
+            claimName: my-pvc
       initContainers:
         - name: busybox
           image: busybox:latest
           args: ["rm", "rf", "/var/lib/mysql/lost+found"]
           volumeMounts:
           - mountPath: /var/lib/mysql
-            name: vpro-db-data
+            name: my-pvc

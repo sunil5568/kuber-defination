@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 3Gi  # Size of the EBS volume
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce  # Use appropriate access mode based on your use case
+  persistentVolumeReclaimPolicy: Retain  # Or other appropriate policy
+  storageClassName: ""  # Empty to indicate that it's not managed by a StorageClass
+  awsElasticBlockStore:
+    volumeID: vol-07783f6c25b94463c  # ID of your EBS volume
+    fsType: ext4  # Filesystem type
+
