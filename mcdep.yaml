@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: vpromc
-  replicals: 1
+  replicas: 1
   template:
     metadata:
       labels:
@@ -21,6 +21,6 @@ spec:
             cpu: "500m"
         ports:
         - name: vpromc-port
-          containerPort: 112211
+          containerPort: 11211
 
 
