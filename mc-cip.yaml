@@ -6,8 +6,8 @@ spec:
   selector:
     app: vpromc
   ports:
-  - port: 112211
+  - port: 11211
     targetPort: vpromc-port
-  type: CluseterIP
+  type: ClusterIP
 
 
