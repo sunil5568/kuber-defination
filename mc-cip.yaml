@@ -8,4 +8,6 @@ spec:
   ports:
   - port: 112211
     targetPort: vpromc-port
-type: CluseterIP
+  type: CluseterIP
+
+
